@@ -5,6 +5,7 @@ using UnityEngine;
 public class Recolector : MonoBehaviour
 {
     int contador = 0;
+    UIManager uiManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +23,14 @@ public class Recolector : MonoBehaviour
         if (other.CompareTag("Coleccionable"))
         {
             Destroy(other.gameObject);
-
             contador++;
-
+            uiManager.UpdateScore(contador);
             Debug.Log("Objetos recolectados: " + contador);
         }
     }
+    void Awake()
+    {
+        uiManager = FindObjectOfType<UIManager>();
+    }
 }
+
