@@ -1,32 +1,24 @@
 fileFormatVersion: 2
-guid: 1c0c2bbbfe106e64fa40f21ba6c20799
+guid: 2247c1a00267ce04cad33b45ddd38d88
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Cube
-    100002: Cylinder
+    100002: Cube.001
     100004: //RootNode
-    100006: Cube.001
     400000: Cube
-    400002: Cylinder
+    400002: Cube.001
     400004: //RootNode
-    400006: Cube.001
-    2100000: No Name
-    2100002: Material.001
-    2100004: Negro azulado
-    2100006: Blanco
-    2100008: Azul
+    2100000: Negro
+    2100002: Gris
     2300000: Cube
-    2300002: Cylinder
+    2300002: Cube.001
     2300004: //RootNode
-    2300006: Cube.001
     3300000: Cube
-    3300002: Cylinder
+    3300002: Cube.001
     3300004: //RootNode
-    3300006: Cube.001
     4300000: Cube
-    4300002: Cylinder
-    4300004: Cube.001
+    4300002: Cube.001
   externalObjects: {}
   materials:
     importMaterials: 1
