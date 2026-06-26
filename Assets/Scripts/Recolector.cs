@@ -4,33 +4,43 @@ using UnityEngine;
 
 public class Recolector : MonoBehaviour
 {
-    int contador = 0;
-    UIManager uiManager;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    int score = 0;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void OnTriggerEnter(Collider other)
-    
-    {
-        if (other.CompareTag("Coleccionable"))
-        {
-            Destroy(other.gameObject);
-            contador++;
-            uiManager.UpdateScore(contador);
-            Debug.Log("Objetos recolectados: " + contador);
-        }
-    }
+    public int puntajeMaximo = 5;
+
+    UIManager uiManager;
+
     void Awake()
     {
         uiManager = FindObjectOfType<UIManager>();
     }
-}
 
+    void Start()
+    {
+
+    }
+
+    void Update()
+    {
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Coleccionable"))
+        {
+            Destroy(other.gameObject);
+
+            score++;
+
+            uiManager.UpdateScore(score);
+
+            if (score >= puntajeMaximo)
+            {
+                uiManager.MostrarPantallaWin();
+
+                Time.timeScale = 0;
+            }
+        }
+    }
+}

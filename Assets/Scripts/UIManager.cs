@@ -5,20 +5,13 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-public TextMeshProUGUI scoreText;
-public TextMeshProUGUI timerText;
-    // Start is called before the first frame update
-    void Start()
-    {
-    
-    }
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI timerText;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
- public void UpdateScore(int score)
+    public GameObject winPanel;
+    public GameObject gameOverPanel;
+
+    public void UpdateScore(int score)
     {
         scoreText.text = "Score: " + score;
     }
@@ -27,5 +20,14 @@ public TextMeshProUGUI timerText;
     {
         timerText.text = "00:" + Mathf.CeilToInt(timer);
     }
-}
 
+    public void MostrarPantallaWin()
+    {
+        winPanel.SetActive(true);
+    }
+
+    public void MostrarPantallaGameOver()
+    {
+        gameOverPanel.SetActive(true);
+    }
+}
